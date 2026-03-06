@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+
+# Molecule
+.molecule/
+molecule/*/instance_config.yml
+
+# OS
+.DS_Store
