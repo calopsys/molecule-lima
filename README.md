@@ -22,7 +22,7 @@ rm -rf lima-$(uname -m)*
 
 ### Install Molecule Lima Driver
 ```bash
-pip install git+https://github.com/calopsys/molecule-lima.git@1.0.0
+pip install git+https://github.com/calopsys/molecule-lima.git@1.0.1
 ```
 
 ## Quick Start
