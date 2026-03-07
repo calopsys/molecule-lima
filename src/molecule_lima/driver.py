@@ -35,7 +35,7 @@ class Lima(Driver):
         Args:
             config: An instance of a Molecule config.
         """
-        super().__init__(config)
+        super().__init__(config)  # type: ignore[arg-type]
         self._name = self.default_name
 
     @property
