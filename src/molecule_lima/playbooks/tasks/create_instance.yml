@@ -85,8 +85,6 @@
   ansible.builtin.shell: |
     timeout {{ ssh_timeout }} bash -c 'until limactl shell {{ instance_name }} echo ready 2>/dev/null; do sleep 2; done'
   changed_when: false
-  retries: 3
-  delay: 5
 
 - name: Get SSH connection info
   ansible.builtin.shell: limactl list "{{ instance_name }}" --format '{{"{{.SSHLocalPort}}"}}'

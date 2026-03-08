@@ -13,7 +13,7 @@
       failed_when: lima_version.rc != 0
 
     - name: Create Lima instances
-      include_tasks: create_instance.yml
+      ansible.builtin.include_tasks: tasks/create_instance.yml
       loop: "{{ molecule_yml.platforms }}"
       loop_control:
         loop_var: instance
@@ -31,7 +31,7 @@
   gather_facts: false
   tasks:
     - name: Wait for instances to be ready
-      include_tasks: validate_instance.yml
+      ansible.builtin.include_tasks: tasks/validate_instance.yml
       loop: "{{ molecule_yml.platforms }}"
       loop_control:
         loop_var: instance
