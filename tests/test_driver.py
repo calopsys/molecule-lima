@@ -1,9 +1,10 @@
 """Unit tests for Molecule Lima Driver."""
 
-import pytest
 from unittest.mock import MagicMock, patch
 
+import pytest
 from molecule import api
+
 from molecule_lima.driver import Lima
 
 
@@ -57,7 +58,7 @@ def test_driver_default_ssh_connection_options():
 def test_driver_required_collections():
     """Test that required_collections returns correct collections."""
     driver = Lima()
-    expected = {"community.general": "9.0.0"}
+    expected = {}
     assert driver.required_collections == expected
 
 

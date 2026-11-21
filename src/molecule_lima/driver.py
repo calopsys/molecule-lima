@@ -90,9 +90,7 @@ class Lima(Driver):
     @property
     def required_collections(self) -> dict[str, str]:
         """Return required Ansible collections."""
-        return {
-            "community.general": "9.0.0",
-        }
+        return {}
 
     def login_options(self, instance_name: str) -> dict[str, str]:
         """Return login options for instance."""

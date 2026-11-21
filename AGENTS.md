@@ -223,6 +223,10 @@ tests/
   __init__.py       # Test package
   conftest.py       # Pytest fixtures
   test_driver.py    # Driver unit tests
+
+e2e/
+  README.md         # How to run the end-to-end test
+  molecule/default/ # Molecule scenario for a real Lima VM
 ```
 
 ### Pre-commit Checks
@@ -242,6 +246,14 @@ pytest tests/ -v
 3. Ensure all tests pass
 4. Run lint and type checks
 5. Update documentation if needed
+
+### Upgrading Dependencies
+
+Use the `upgrade-dependencies` skill in `.claude/skills/upgrade-dependencies/`. Read its `SKILL.md` for the procedure.
+
+### End-to-End Test
+
+The unit tests use mocks. The scenario in `e2e/` runs the driver on a real Lima VM. Read `e2e/README.md` for the requirements and the commands.
 
 ### Common Patterns
 

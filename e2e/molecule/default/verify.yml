@@ -1,0 +1,12 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Read marker file
+      ansible.builtin.slurp:
+        src: /tmp/e2e-marker
+      register: marker
+    - name: Check marker content
+      ansible.builtin.assert:
+        that: (marker.content | b64decode) == "molecule-lima e2e\n"

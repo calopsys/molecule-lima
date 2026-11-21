@@ -1,0 +1,19 @@
+---
+driver:
+  name: molecule-lima
+  ssh_timeout: 600
+
+platforms:
+  - name: molecule-lima-e2e
+    cpus: 2
+    memory: 2GiB
+    disk: 10GiB
+
+provisioner:
+  name: ansible
+  config_options:
+    defaults:
+      host_key_checking: false
+
+verifier:
+  name: ansible

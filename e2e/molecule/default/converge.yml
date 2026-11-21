@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Write marker file
+      ansible.builtin.copy:
+        content: "molecule-lima e2e\n"
+        dest: /tmp/e2e-marker
+        mode: "0644"
